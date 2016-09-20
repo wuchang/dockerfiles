@@ -1,0 +1,9 @@
+network:
+    host: 0.0.0.0
+
+cluster:
+    name: c2-yuqing
+
+node:
+    name:  node1
+
