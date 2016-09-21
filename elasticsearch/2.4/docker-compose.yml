@@ -1,30 +1,24 @@
 version: '2'
 
 services:
-  gateway:
+    #  gateway:
       #    image: c2-elasticsearch:2.4\
-    build: .
-    environment:
-      UNICAST_HOSTS: master
-      TYPE: GATEWAY
-    ports:
-      - "9200:9200"
-      - "9300:9300"
-
-  master:
-      #image: c2-elasticsearch:2.4
-    build: .
-    environment:
-      UNICAST_HOSTS: gateway
-      TYPE: MASTER
-      MIN_MASTERS: 2
-
-  data:
+      #build: .
+      #environment:
+      #  UNICAST_HOSTS: master
+      #  TYPE: GATEWAY
+      #    ports:
+      #      - "9200:9200"
+      #      - "9300:9300"
+  es:
       #    image: c2-elasticsearch:2.4
     build: .
     volumes:
-      - .data:/usr/share/elasticsearch/data
-    environment:
-      UNICAST_HOSTS: master,gateway
-      TYPE: DATA
+      - .data/data/:/usr/share/elasticsearch/data/
+      - .data/logs/:/usr/share/elasticsearch/logs/
+      - .config/:/usr/share/elasticsearch/config/
+    command: elasticsearch 
+    ports: 
+        - "9200:9200"
+        - "9300:9300"
 

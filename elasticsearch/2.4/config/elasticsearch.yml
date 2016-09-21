@@ -1,9 +1,13 @@
-network:
-    host: 0.0.0.0
-
-cluster:
-    name: c2-yuqing
-
-node:
-    name:  node1
-
+network.host: 0.0.0.0
+cluster.name: c2-yuqing
+node.name: node-hk
+#node.master: true
+#node.data: true
+#nsport.tcp.port: 9300
+#http.port: 9200
+#discovery.zen.ping.multicast.enabled: false
+#discovery.zen.fd.ping_timeout: 100s
+#discovery.zen.ping.timeout: 100s
+#discovery.zen.minimum_master_nodes: 2
+#discovery.zen.ping.unicast.hosts: ["47.89.11.187:9300","112.74.36.41:9300"]
+#action.auto_create_index: false
