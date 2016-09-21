@@ -22,6 +22,8 @@ services:
   data:
       #    image: c2-elasticsearch:2.4
     build: .
+    volumes:
+      - .data:/usr/share/elasticsearch/data
     environment:
       UNICAST_HOSTS: master,gateway
       TYPE: DATA
