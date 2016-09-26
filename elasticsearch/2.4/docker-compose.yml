@@ -16,7 +16,7 @@ services:
     volumes:
       - .data/data/:/usr/share/elasticsearch/data/
       - .data/logs/:/usr/share/elasticsearch/logs/
-      - .config/:/usr/share/elasticsearch/config/
+      - ./config:/usr/share/elasticsearch/config
     command: elasticsearch 
     ports: 
         - "9200:9200"

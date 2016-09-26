@@ -1,4 +1,5 @@
 network.host: 0.0.0.0
+network.publish_host: 47.89.11.187
 cluster.name: c2-yuqing
 node.name: node-hk
 #node.master: true
@@ -9,5 +10,5 @@ node.name: node-hk
 #discovery.zen.fd.ping_timeout: 100s
 #discovery.zen.ping.timeout: 100s
 #discovery.zen.minimum_master_nodes: 2
-#discovery.zen.ping.unicast.hosts: ["47.89.11.187:9300","112.74.36.41:9300"]
+discovery.zen.ping.unicast.hosts: ["47.89.11.187","112.74.36.41","112.74.163.75"]
 #action.auto_create_index: false
