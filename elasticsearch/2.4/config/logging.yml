@@ -1,5 +1,5 @@
 # you can override this using by setting a system property, for example -Des.logger.level=DEBUG
-es.logger.level: ALL
+es.logger.level: DEBUG
 rootLogger: ${es.logger.level}, console
 logger:
   # log action execution errors for easier debugging

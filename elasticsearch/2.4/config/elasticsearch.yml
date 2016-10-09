@@ -12,3 +12,4 @@ node.name: node-hk
 #discovery.zen.minimum_master_nodes: 2
 discovery.zen.ping.unicast.hosts: ["47.89.11.187","112.74.36.41","112.74.163.75"]
 #action.auto_create_index: false
+ndex.analysis.analyzer.ik.type: "ik"
