@@ -1,2 +1,2 @@
 FROM docker
-RUN apk add --no-cache py-pip && pip install docker-compose
+RUN apk add --no-cache py-pip curl && pip install docker-compose 
