@@ -4,7 +4,10 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends libgdiplus libc6-dev locales libopenblas-base\
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-    && locale-gen zh_CN && locale-gen zh_CN.utf8
+    && locale-gen zh_CN && locale-gen zh_CN.utf8 \
+    && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && echo "Asia/Shanghai" > /etc/timezone \
+    && dpkg-reconfigure -f noninteractive tzdata
 
 # RUN apt-get  update && apt-get -y  --allow-unauthenticated install   locales && apt-get clean
 # RUN locale-gen zh_CN && locale-gen zh_CN.utf8
