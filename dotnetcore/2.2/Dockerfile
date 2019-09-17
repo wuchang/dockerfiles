@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-bionic
 # Dependencies for libraries
 RUN apt-get update \
     && apt-get install -y --no-install-recommends libgdiplus libc6-dev locales libopenblas-base\
