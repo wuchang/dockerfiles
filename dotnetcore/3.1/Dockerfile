@@ -8,7 +8,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && locale-gen zh_CN \
     && locale-gen zh_CN.utf8 \
     && dpkg-reconfigure -f noninteractive tzdata
-
+RUN ln -s /usr/lib/libgdiplus.so /usr/lib/gdiplus.dll
 # RUN apt-get  update && apt-get -y  --allow-unauthenticated install   locales && apt-get clean
 # RUN locale-gen zh_CN && locale-gen zh_CN.utf8
 ENV LANG=zh_CN.UTF-8
