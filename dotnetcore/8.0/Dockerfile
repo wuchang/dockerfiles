@@ -4,6 +4,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 #FROM mcr.microsoft.com/dotnet/sdk:6.0 AS base
 WORKDIR /app
 EXPOSE 80
+ENV TZ=Asia/Shanghai
 ADD ./sources.list /etc/apt/
 # 时区问题 docker run --name test -e TZ=Asia/Shanghai
 # RUN echo "Asia/Shanghai" > /etc/timezone && \
